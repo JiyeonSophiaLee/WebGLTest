@@ -1,4 +1,4 @@
-import 'regenerator-runtime/runtime'
+import 'regenerator-runtime/runtime';
 import * as THREE from './three.module.js';
 
 			import Stats from './stats.module.js';
