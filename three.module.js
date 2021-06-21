@@ -23523,7 +23523,7 @@
  
 			 const contextName = contextNames[ i ];
 			 const context = _canvas.getContext( contextName, contextAttributes );
-			  document.getElementById('info').innerHTML += '</br>contextName ==>  ' +contextName;
+			//   document.getElementById('info').innerHTML += '</br>contextName ==>  ' +contextName;
 			
 			//  console.log('contextName', contextName)
 			 if ( context !== null ) {
@@ -23571,7 +23571,8 @@
 			 }
  
 			 _gl = getContext( contextNames, contextAttributes );
-			 console.log('_gl',_gl)
+			  document.getElementById('info').innerHTML += '</br>_gl =====>    ' +_gl;
+			
 			 if ( _gl === null ) {
 				
 				 if ( getContext( contextNames ) ) {
