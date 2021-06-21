@@ -23553,7 +23553,8 @@
  
 			 const contextNames = [ 'webgl2', 'webgl', 'experimental-webgl' ];
  
-			 console.log('this',_this.isWebGL1Renderer)
+			 console.log('_this.isWebGL1Renderer',_this.isWebGL1Renderer)
+			 console.log('typeof WebGL2RenderingContext',typeof WebGL2RenderingContext)
 			 if ( _this.isWebGL1Renderer === true ) {
  
 				 contextNames.shift();
