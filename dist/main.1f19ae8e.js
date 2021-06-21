@@ -19756,7 +19756,9 @@ function WebGLRenderer() {
 
     if (_gl === null) {
       var contextNames = ['webgl2', 'webgl', 'experimental-webgl'];
-      console.log('this', _this.isWebGL1Renderer);
+      document.getElementById('info').innerHTML += '</br>_this.isWebGL1Renderer==>  ' + _this.isWebGL1Renderer;
+      document.getElementById('info').innerHTML += '</br>WebGL2RenderingContext===>  ' + (typeof WebGL2RenderingContext === "undefined" ? "undefined" : _typeof(WebGL2RenderingContext)); //  console.log('_this.isWebGL1Renderer',_this.isWebGL1Renderer)
+      //  console.log('typeof WebGL2RenderingContext',typeof WebGL2RenderingContext)
 
       if (_this.isWebGL1Renderer === true) {
         contextNames.shift();
@@ -40893,7 +40895,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57002" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59694" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

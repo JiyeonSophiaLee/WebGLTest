@@ -23553,8 +23553,10 @@
  
 			 const contextNames = [ 'webgl2', 'webgl', 'experimental-webgl' ];
  
-			 console.log('_this.isWebGL1Renderer',_this.isWebGL1Renderer)
-			 console.log('typeof WebGL2RenderingContext',typeof WebGL2RenderingContext)
+			 document.getElementById('info').innerHTML += '</br>_this.isWebGL1Renderer==>  ' +_this.isWebGL1Renderer;
+			 document.getElementById('info').innerHTML += '</br>WebGL2RenderingContext===>  ' +typeof WebGL2RenderingContext;
+			//  console.log('_this.isWebGL1Renderer',_this.isWebGL1Renderer)
+			//  console.log('typeof WebGL2RenderingContext',typeof WebGL2RenderingContext)
 			 if ( _this.isWebGL1Renderer === true ) {
  
 				 contextNames.shift();
