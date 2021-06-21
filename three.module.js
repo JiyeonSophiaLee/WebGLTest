@@ -23523,7 +23523,13 @@
  
 			 const contextName = contextNames[ i ];
 			 const context = _canvas.getContext( contextName, contextAttributes );
-			 if ( context !== null ) return context;
+			  document.getElementById('info').innerHTML += '</br>contextName ==>  ' +contextName;
+			
+			//  console.log('contextName', contextName)
+			 if ( context !== null ) {
+				//  console.log('context is null')
+				return context
+			};
  
 		 }
  
@@ -23553,8 +23559,9 @@
  
 			 const contextNames = [ 'webgl2', 'webgl', 'experimental-webgl' ];
  
-			 document.getElementById('info').innerHTML += '</br>_this.isWebGL1Renderer==>  ' +_this.isWebGL1Renderer;
-			 document.getElementById('info').innerHTML += '</br>WebGL2RenderingContext===>  ' +typeof WebGL2RenderingContext;
+			//  document.getElementById('info').innerHTML += '</br>_this.isWebGL1Renderer ==>  ' +_this.isWebGL1Renderer;
+			//  document.getElementById('info').innerHTML += '</br>WebGLRenderingContext ===>  ' +typeof WebGLRenderingContext;
+			//  document.getElementById('info').innerHTML += '</br>WebGL2RenderingContext ===>  ' +typeof WebGL2RenderingContext;
 			//  console.log('_this.isWebGL1Renderer',_this.isWebGL1Renderer)
 			//  console.log('typeof WebGL2RenderingContext',typeof WebGL2RenderingContext)
 			 if ( _this.isWebGL1Renderer === true ) {
@@ -23564,9 +23571,9 @@
 			 }
  
 			 _gl = getContext( contextNames, contextAttributes );
- 
+			 console.log('_gl',_gl)
 			 if ( _gl === null ) {
- 
+				
 				 if ( getContext( contextNames ) ) {
  
 					 throw new Error( 'Error creating WebGL context with your selected attributes.' );
